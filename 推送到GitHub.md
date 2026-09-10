@@ -43,6 +43,24 @@ https://fastly.jsdelivr.net/gh/<USER>/acmilan-kits-cdn@v1/images/02-2122-home.jp
 
 回到 `acmilan-kits` 目录，双击 **`设置用户名.bat`**，输入用户名 + 选 CDN 域名，会自动生成 `公众号排版稿_最终版.md`，里面所有图片链接都已填好。
 
+## 第二次推送（加入交互图鉴）
+
+仓库已新增 `gallery/`（39 张压缩图）和根目录 `index.html`（Pages 版交互图鉴），需要再推一次：
+
+```bash
+cd "C:/Users/ieeen/WorkBuddy/2026-09-08-15-48-49/acmilan-cdn"
+git push origin main
+```
+
+## 开启 GitHub Pages（用于公众号「阅读原文」）
+
+1. 打开 `https://github.com/alwayswithyou/acmilan-kits-cdn/settings/pages`
+2. **Source** 选 `Deploy from a branch`
+3. **Branch** 选 `main`，目录选 `/ (root)`，点 Save
+4. 等约 1 分钟，访问 `https://alwayswithyou.github.io/acmilan-kits-cdn/`
+
+这就是文章末尾「阅读原文」的永久地址，和图片 CDN 同源，不会失效。
+
 ## 国内访问速度
 
 jsDelivr 主域名在国内部分地区不稳定。如果粘贴到公众号/头条后图片加载慢或抓取失败，换备用域名即可（路径不变，只需改域名）：
