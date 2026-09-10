@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="GIVWLsHz4wOvHbdf1aIaSJ">
+<head data-page-node-id="QCFivWG2eC0qulh2xN1HTm">
+<meta charset="UTF-8" data-page-node-id="oCFNMzfJ9Am6sKMkYO2vQ4">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="lQFPYgRCFfd50b6JidI89V">
+<title>AC米兰 2021-22 至 2026-27 球衣图鉴 · Puma 时代</title>
+<style>
+:root{
+  --rosso:#C8102E;
+  --nero:#1A1A1A;
+  --oro:#C8A45A;
+  --bg:#F5F2EC;
+  --card:#FFFFFF;
+  --line:#E5E0D6;
+  --text:#1B1B1B;
+  --muted:#6B6B6B;
+  --accent:#8B0000;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{padding-bottom:64px}
+
+/* ============ 顶部 ============ */
+.hero{background:linear-gradient(135deg,var(--nero) 0%,#2a0608 100%);color:#fff;padding:56px 32px 40px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:repeating-linear-gradient(90deg,var(--rosso) 0 28px,var(--nero) 28px 56px)}
+.hero::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 80px,rgba(255,255,255,.02) 80px 160px);pointer-events:none}
+.hero-inner{max-width:1180px;margin:0 auto;position:relative;z-index:1}
+.hero h1{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:.5px;margin-bottom:12px;line-height:1.2}
+.hero h1 .red{color:var(--rosso)}
+.hero .sub{font-size:15px;opacity:.85;max-width:780px}
+.hero .meta{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+.hero .meta span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:5px 12px;border-radius:14px;font-size:12px}
+
+/* ============ 导航 ============ */
+.nav{position:sticky;top:0;background:rgba(245,242,236,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:50;padding:14px 0}
+.nav-inner{max-width:1180px;margin:0 auto;padding:0 32px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+.nav a{flex-shrink:0;color:var(--text);text-decoration:none;font-size:13px;padding:7px 14px;border-radius:20px;border:1px solid var(--line);background:#fff;transition:all .15s ease;font-weight:500}
+.nav a:hover{background:var(--nero);color:#fff;border-color:var(--nero)}
+
+/* ============ 赛季区 ============ */
+.container{max-width:1180px;margin:0 auto;padding:48px 32px 0}
+.season{margin-bottom:64px;scroll-margin-top:80px}
+.season-header{display:flex;align-items:baseline;gap:16px;margin-bottom:24px;padding-bottom:14px;border-bottom:2px solid var(--nero);position:relative}
+.season-header::after{content:"";position:absolute;left:0;bottom:-2px;width:80px;height:2px;background:var(--rosso)}
+.season-title{font-size:24px;font-weight:800;letter-spacing:.3px}
+.season-tag{font-size:12px;color:var(--muted);font-family:"SF Mono",Consolas,monospace;background:var(--line);padding:3px 8px;border-radius:4px}
+
+/* ============ 球衣卡片网格 ============ */
+.kits{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px}
+.kit{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease;cursor:pointer}
+.kit:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.08)}
+.kit-imgs{position:relative;background:#0c0c0c;overflow:hidden;aspect-ratio:4/5}
+.kit-imgs img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .4s ease}
+.kit-imgs .front{opacity:1}
+.kit-imgs .back{opacity:0}
+.kit:hover .kit-imgs .front{opacity:0}
+.kit:hover .kit-imgs .back{opacity:1}
+.kit-imgs .badge{position:absolute;top:12px;left:12px;background:rgba(0,0,0,.75);color:#fff;font-size:11px;font-weight:600;letter-spacing:1px;padding:5px 10px;border-radius:4px;backdrop-filter:blur(4px);z-index:2;text-transform:uppercase}
+.kit-imgs .badge.home{background:var(--rosso)}
+.kit-imgs .badge.away{background:#fff;color:#1b1b1b}
+.kit-imgs .badge.third{background:var(--oro);color:#1b1b1b}
+.kit-imgs .badge.special{background:#7c3aed}
+.kit-imgs .hint{position:absolute;bottom:10px;right:12px;color:rgba(255,255,255,.7);font-size:10px;letter-spacing:1px;z-index:2;text-shadow:0 1px 2px rgba(0,0,0,.6)}
+
+.kit-body{padding:18px 20px 22px;flex:1;display:flex;flex-direction:column}
+.kit-name{font-size:16px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.kit-name .dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.kit-name .dot.home{background:var(--rosso)}
+.kit-name .dot.away{background:#fff;border:1px solid #999}
+.kit-name .dot.third{background:var(--oro)}
+.kit-name .dot.special{background:#7c3aed}
+.kit-theme{font-size:13px;color:var(--accent);font-weight:600;margin-bottom:10px}
+.kit-desc{font-size:13.5px;color:#3a3a3a;line-height:1.7;flex:1}
+.kit-desc p+p{margin-top:8px}
+.kit-desc strong{color:var(--nero);font-weight:600}
+.kit-tags{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px}
+.kit-tags span{font-size:11px;background:var(--bg);color:var(--muted);padding:3px 8px;border-radius:3px;border:1px solid var(--line)}
+
+/* ============ 单件特殊球衣满宽 ============ */
+.kit.full{grid-column:1/-1}
+.kit.full .kit-imgs{aspect-ratio:21/9}
+.kit.full .kit-imgs img{object-position:center}
+
+/* ============ 页脚 ============ */
+.footer{max-width:1180px;margin:0 auto;padding:32px;text-align:center;color:var(--muted);font-size:12px;border-top:1px solid var(--line);margin-top:32px}
+.footer a{color:var(--rosso);text-decoration:none}
+
+/* ============ 响应式 ============ */
+@media (max-width:640px){
+  .hero{padding:40px 20px 32px}
+  .container{padding:32px 20px 0}
+  .nav-inner{padding:0 20px}
+  .kits{grid-template-columns:1fr;gap:16px}
+  .season-title{font-size:20px}
+}
+</style>
+</head>
+<body data-page-node-id="ehniG0SbGg14qk99TE8KkS">
+
+<header class="hero" data-page-node-id="Qjry6GWHbLVY7Nb81ekYoG">
+  <div class="hero-inner" data-page-node-id="lFi35yaqWBYQga4DOHkp0e">
+    <h1 data-page-node-id="EEjDhocNJIXAZSpW1aUXuv">AC米兰 球衣图鉴 · <span class="red" data-page-node-id="UTErbAfActYLNNzlHZaJ8I">2021/22 — 2026/27</span></h1>
+    <p class="sub" data-page-node-id="qN1NmP3bGEaF6IQDj5whRr">六个赛季，跨越 Puma 合作的中段与新约，记录红黑军团从圣西罗冠军到米兰后现代化身份再定义的全部主、客、第三球衣。点击图片悬停可查看官方发布的第二张视觉。</p>
+    <div class="meta" data-page-node-id="xPtrXsWgb6V56Ta2wpY2E2">
+      <span data-page-node-id="iUJxcArnfilCEqHNDDTDh0">Puma 装备合作 (2018—至今)</span>
+      <span data-page-node-id="294Or6l2AoChP9YKyrLG1Y">6 个赛季</span>
+      <span data-page-node-id="MLVY42gE8O6KwTV5GYk0oP">19 件球衣</span>
+      <span data-page-node-id="tNbnvKWjZt3VgT8Ly67IWG">来源：acmilan.com 官方发布</span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav" data-page-node-id="K0AR1k4C547pRFJrF1xd0g">
+  <div class="nav-inner" data-page-node-id="0xFzw3irslKxoCZ3A7U7NO">
+    <a href="#s2122" data-page-node-id="jQFiy5WwTj71jiw6AtUtf4">2021-22</a>
+    <a href="#s2223" data-page-node-id="vQwYHheFJbrN0nXnXfJorc">2022-23</a>
+    <a href="#s2324" data-page-node-id="OmktpEpVAMOv04NJBCrqpk">2023-24</a>
+    <a href="#s2425" data-page-node-id="Rfi2BRbrfVrmEE0dqIYABy">2024-25</a>
+    <a href="#s2526" data-page-node-id="fCoQ6NhzPGKp35VH1GQaPH">2025-26</a>
+    <a href="#s2627" data-page-node-id="Gadg22AS8CUtrdCcUF4t0l">2026-27</a>
+    <a href="#s2425anniv" data-page-node-id="4wmkQC1EFHw9gj4upYkRkv">125周年</a>
+  </div>
+</nav>
+
+<div class="container" data-page-node-id="AeZYk5YKfVuYO7sA8AfvZo">
+
+  <!-- ============ 2021-22 ============ -->
+  <section class="season" id="s2122" data-page-node-id="OlEeUHVU3ujXjyJa9N5s5T">
+    <div class="season-header" data-page-node-id="eYMv0qSzjO7WE0xnf2Mrzt">
+      <div class="season-title" data-page-node-id="7sG2mRZn8M82UqQ9Zwqzpt">2021/22 赛季</div>
+      <div class="season-tag" data-page-node-id="uw68SKA66zBeozvOX9zAEd">Milan × Puma · 3 球衣</div>
+    </div>
+    <div class="kits" data-page-node-id="kAUmNpj61SDkJjKYaIpeK0">
+
+      <article class="kit" data-type="home" data-page-node-id="mqjdP6XwsA37PFwNRY2K4s">
+        <div class="kit-imgs" data-page-node-id="0tarKv5EJGY0MDlpS7WIt0">
+          <span class="badge home" data-page-node-id="kBvCtDfxX3eXw0e1TzQInD">Home</span>
+          <img class="front" src="gallery/2122-home-main.jpg" alt="2021-22 主场球衣" data-page-node-id="aiMakL4iaFlONcPWPZyNWo">
+          <img class="back" src="gallery/2122-home-wide.jpg" alt="2021-22 主场球衣 宣传图" data-page-node-id="AxJG9CCVi4U3H9Tk5sEWcP">
+          <span class="hint" data-page-node-id="v2BHF4JzFLiNrXdOJDJavh">HOVER ↻</span>
+        </div>
+        <div class="kit-body" data-page-node-id="BHdmzmat0ggSgqPYdwGUs6">
+          <div class="kit-name" data-page-node-id="AaUADXPkACA5sHqKrrfgHx"><span class="dot home" data-page-node-id="3zmrU5OLp4g4rebpUsSpUn"></span>主场球衣 Home</div>
+          <div class="kit-theme" data-page-node-id="TY1Cbbm5UeL8f48GcGN2jt">"Move Like Milan" · 经典红黑的不对称重塑</div>
+          <div class="kit-desc" data-page-node-id="ng2E0KNwrUFEHf4CpoGU87">
+            <p data-page-node-id="Fo8MC2tHF31bnxoJdo5Duj"><strong data-page-node-id="WZLj0dgHCCFDmFlEmBuQSG">设计语言：</strong>采用 Puma 现代版 Rossoneri 经典造型——红色底色上以<strong data-page-node-id="gPGJxFgQkcoNu8X5Cqzfmy">不同宽度的黑色竖纹</strong>取代等宽传统条纹，中央一条主黑纹向两侧渐窄。白色 Polo 立领与袖口细节点缀，整体外观延续 1899 年俱乐部创立以来的视觉身份。</p>
+            <p data-page-node-id="fms5A6A5zpo2isZhSAZTA1"><strong data-page-node-id="u6eIzm7ZOx19QE17D9mbeA">细节：</strong>胸前 Puma 美洲狮徽标与 Emirates "Fly Better" 主赞助；后颈内印 <strong data-page-node-id="Ye15AORkHs5hQ8aoRjOnm8">"SEMPRE MILAN"</strong>（永远米兰）；2021/22 赛季红黑军团在意甲完成 11 年回归意甲冠军的关键征途，这件球衣见证伊布、吉鲁、莱奥、托纳利的荣耀时刻。</p>
+          </div>
+          <div class="kit-tags" data-page-node-id="24vSqXAiRo73MuPeBNvlg4"><span data-page-node-id="mMgPYlAyWA479GXqLODe4z">Polo 领</span><span data-page-node-id="ra3Z7BXQf18qGve51dtP4o">不对称宽条纹</span><span data-page-node-id="I7oNxoLDZtlSwQfPwNBiL5">Scudetto 加身</span></div>
+        </div>
+      </article>
+
+      <article class="kit" data-type="away" data-page-node-id="nBiNwNdZFJKjDFAMqCKZi4">
+        <div class="kit-imgs" data-page-node-id="6sG6HfgbThd1IOV6T31d5F">
+          <span class="badge away" data-page-node-id="4KCp9GvVShxtHULiwJYHF5">Away</span>
+          <img class="front" src="gallery/2122-away-main.jpg" alt="2021-22 客场球衣" data-page-node-id="nlB1NeM3ZhUgfAEsPV1TPp">
+          <img class="back" src="gallery/2122-away-wide.jpg" alt="2021-22 客场球衣 宣传图" data-page-node-id="KcQ2fR07lABBFc9fbbB5lG">
+          <span class="hint" data-page-node-id="BBNpumml1RZXGXp4dMpX1r">HOVER ↻</span>
+        </div>
+        <div class="kit-body" data-page-node-id="1T8woHvpDeMBtiEJnqpqZD">
+          <div class="kit-name" data-page-node-id="69BgjUCg4CQEkHlollGrKc"><span class="dot away" data-page-node-id="h4iqWBwRfkqHFXGHQbpEgP"></span>客场球衣 Away</div>
+          <div class="kit-theme" data-page-node-id="EuZHwf6pkYEgn577c26lfz">"Sport for Change" · 慈善理念的城市纹理</div>
+          <div class="kit-desc" data-page-node-id="MGnaEoF03IWMP1t1lLUJg1">
+            <p data-page-node-id="v4SqwKxdLPNxmjv8Q7HAgW"><strong data-page-node-id="UAAyeWyGu1Nr3m3dcFejAM">设计语言：</strong>以暖白色 <strong data-page-node-id="gDdVZuqaG86PyNaxXY5bCq">"Afterglow"</strong>（余晖）为主色，是俱乐部六夺欧冠"幸运客场球衣"传统的延续。面料上印有六个全球城市的地图纹理，呼应米兰基金会 <strong data-page-node-id="bHXZlyeb5xwKRHub75MnYY">"Sport for Change"</strong>（体育改变生活）慈善倡议，致敬通过体育赋权的城市社区。</p>
+            <p data-page-node-id="bVIYQEHnqZNAWia8az9HSc"><strong data-page-node-id="kXYFg8jLxoDjwD9TVvEhU1">细节：</strong>低饱和米白底色搭配暗红与黑细线几何花纹；胸前印有纽约、墨尔本、里约热内卢、加尔各答、内罗毕及米兰本身的城市轮廓剪影，是 Puma 与俱乐部对社会责任的视觉表达。</p>
+          </div>
+          <div class="kit-tags" data-page-node-id="xwHNpiOKMRFkRHI0FK5dFl"><span data-page-node-id="pY2yqtXAipdNYWnS3gMkaN">米白余晖</span><span data-page-node-id="CJKfsjUjtthEqtNPp8qEfb">慈善城市纹理</span><span data-page-node-id="XCCqnL3Ag3AHyWRoHgEi7s">米兰基金会</span></div>
+        </div>
+      </article>
+
+      <article class="kit" data-type="third" data-page-node-id="yyX4RMkHZetQGSNyc4pKAI">
+        <div class="kit-imgs" data-page-node-id="zS8YtcBS954MIRvaKL6kSt">
+          <span class="badge third" data-page-node-id="A2ISklvEDgFNW5z7OmzP3H">Third</span>
+          <img class="front" src="gallery/2122-third-main.jpg" alt="2021-22 第三球衣" data-page-node-id="yHmArMBFzBBxmWBKpyFOdB">
+          <img class="back" src="gallery/2122-third-wide.jpg" alt="2021-22 第三球衣 宣传图" data-page-node-id="USXn38LNhGvxChoeVCgnsD">
+          <span class="hint" data-page-node-id="mjeBE3eeViojPvpXT9OjYh">HOVER ↻</span>
+        </div>
+        <div class="kit-body" data-page-node-id="9IQQlBiPs2NRoih2GxPrVF">
+          <div class="kit-name" data-page-node-id="pLH1SoLozIEurjFIZku83H"><span class="dot third" data-page-node-id="ksQlQmQcEcWB2y6fzJJKLJ"></span>第三球衣 Third</div>
+          <div class="kit-theme" data-page-node-id="KeMEUBSs6RmnfQ1lK6ajmM">"改写规则" · 街头文化 × 球衣的颠覆之作</div>
+          <div class="kit-desc" data-page-node-id="tUcnJG48utRFrLTBJNTDD4">
+            <p data-page-node-id="DyGCT5erqiaLQO6VvxmmvI"><strong data-page-node-id="bDsQaDNuUhAc6jCrx33pTL">设计语言：</strong>通体<strong data-page-node-id="bdfIlYCcFTbp9eiJS7V9Af">纯黑 + 暗红细节</strong>的革命性设计，<strong data-page-node-id="LRsyKNFggekcoDzbrXVW6b">取消传统胸前队徽</strong>，改为定制字体超大字样 <strong data-page-node-id="O5WtmK7oHE9zUHSBNemeXY">"AC MILAN"</strong> 居中横置；队徽被整体平移至<strong data-page-node-id="A0zqMTevjFNcQL95NM54aU">后领口下方</strong>，并以满天星式全幅队徽暗纹铺满整件球衣面料。</p>
+            <p data-page-node-id="UvJ7ffUkBgimfejUk95F2M"><strong data-page-node-id="NQQpwgZEa8PZwFLZoWDDoV">细节：</strong>Puma 品牌"FAM"系列中的一员（与曼城、马赛、瓦伦西亚同批），定位足球 × 街头文化融合；100% 回收聚酯纤维 + Dope Dye 染色技术；<strong data-page-node-id="AQHND99TyX64Emzm45QQcY">BitMEX 首次</strong>作为左袖赞助商亮相。是 Puma 史上最具话题性的第三球衣之一。</p>
+          </div>
+          <div class="kit-tags" data-page-node-id="bd5ozj0Ptx6QDCLRarugOG"><span data-page-node-id="ANZ4BLecMbmInq88tkItZh">无胸前队徽</span><span data-page-node-id="WD25frDwV9nL1HgxFjK0K0">街头风格</span><span data-page-node-id="wzdAXQpxcSyQOpD2YCh2pz">100% 回收面料</span><span data-page-node-id="MTWHlF69K1bqAnKbUzJ0Du">BitMEX 袖标</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ 2022-23 ============ -->
+  <section class="season" id="s2223" data-page-node-id="8AVQj1OgPxRrNYmhPBfF5P">
+    <div class="season-header" data-page-node-id="1DBsbbR0oZlNm2vpn6ElVk">
+      <div class="season-title" data-page-node-id="8FZckCmxBZspvRpkt7hF0G">2022/23 赛季</div>
+      <div class="season-tag" data-page-node-id="0MAPJ00v2oZ4PCgdHfzCnD">Scudetto 卫冕季 · 3 球衣</div>
+    </div>
+    <div class="kits" data-page-node-id="rutnoJQzopQaOysAtTW6N2">
+
+      <article class="kit" data-type="home" data-page-node-id="Um5oC0pKb2qiqlKCTygXkC">
+        <div class="kit-imgs" data-page-node-id="XMq9CveP1HiuW8ubsX1V9Y">
+          <span class="badge home" data-page-node-id="x3ySkfkcFETGkGffYh35Wz">Home</span>
+          <img class="front" src="gallery/2223-home-main.jpg" alt="2022-23 主场球衣" data-page-node-id="LVWNAYH6cPhfrfDrZscarZ">
+          <img class="back" src="gallery/2223-home-wide.jpg" alt="2022-23 主场球衣 宣传图" data-page-node-id="jDJmgsodVau0Xrof3NmPLm">
+          <span class="hint" data-page-node-id="xTzVj0p7V4QlpPpsSDkaCs">HOVER ↻</span>
+        </div>
+        <div class="kit-body" data-page-node-id="Ael8USXigfygbG14lxk9AZ">
+          <div class="kit-name" data-page-node-id="EUGKOYaiBxaG5VSVYild7l"><span class="dot home" data-page-node-id="pkdG7vSG0cus3BEQlj2lkQ"></span>主场球衣 Home</div>
+          <div class="kit-theme" data-page-node-id="PXhT6RoDRSw33APD2fLS0l">"That Milan Touch" · 卫冕者的深沉与骄傲</div>
+          <div class="kit-desc" data-page-node-id="WHmR87AcoZOCg0fAV0ktTQ">
+            <p data-page-node-id="weM0ZBUkNTnuRlfd57L7JK"><strong data-page-node-id="WgB4q5pd8Iqxtau1BXmw5e">设计语言：</strong>与 21/22 赛季的"明亮红"不同，这件主场采用<strong data-page-node-id="UPQDXRZxOPrZpAvwLy5EEC">深邃黑色作底</strong>，让红黑条纹在黑底上更具雕塑感。领口、袖口首次加入<strong data-page-node-id="QnkD6iog1CxgprxvWY8u7l">意大利三色旗 Tricolore</strong>点缀，后背上部印有米兰市徽章形纹。</p>
+            <p data-page-node-id="87KT8b1BGP6tyDEiKe222r"><strong data-page-node-id="4dxv5carVb74W9jNngqYcY">细节：</strong>胸前 Puma 徽标 + Emirates 主赞助；黑底之上的红色条形更显压迫感与"红黑火焰"气质；红黑军团在这件战袍下取得联赛第三并重返欧冠半决赛。</p>
+          </div>
+          <div class="kit-tags" data-page-node-id="9O4N62Iuv2oWWK4A6qWH4o"><span data-page-node-id="gSEKX3jB8uJzQy0VOm8WnG">黑底红纹</span><span data-page-node-id="61Hb1E5nIcvp93p2rkjC5n">意大利三色旗袖口</span><span data-page-node-id="nyfdFCrqouJk5B5cjv4Lzu">米兰市徽</span></div>
+        </div>
+      </article>
+
+      <article class="kit" data-type="away" data-page-node-id="NuUjIg0OFv1xIA5AUODbV0">
+        <div class="kit-imgs" data-page-node-id="EWaSgCPNEoo8SfKU73gD4Y">
+          <span class="badge away" data-page-node-id="NHCVeDzhcuY7gP1cscKMkH">Away</span>
+          <img class="front" src="gallery/2223-away-main.jpg" alt="2022-23 客场球衣" data-page-node-id="WnwD5CHNVthPdbN9KTHp7J">
+          <img class="back" src="gallery/2223-away-wide.jpg" alt="2022-23 客场球衣 宣传图" data-page-node-id="MIdmxzgPIvB8KCcmsVbGv5">
+          <span class="hint" data-page-node-id="0MVjPAiAAQfXBrzYWh2zD5">HOVER ↻</span>
+        </div>
+        <div class="kit-body" data-page-node-id="XhaYWqSjIU2ppfrcYCSi6u">
+          <div class="kit-name" data-page-node-id="tPXJWhaLu1Z8Cqd7HLmiuq"><span class="dot away" data-page-node-id="fbuFlV63vzjzTlNYNcCmda"></span>客场球衣 Away</div>
+          <div class="kit-theme" data-page-node-id="B7uORaADK7aXHdn5dwM4pB">1984/85 经典复刻 · 致敬 16 岁的保罗·马尔蒂尼</div>
+          <div class="kit-desc" data-page-node-id="wRmILa3ljzGiru8qxw94Tb">
+            <p data-page-node-id="jnH6IVDq2sp0Jp9avZuRxG"><strong data-page-node-id="1It4EncebLB9R0ncut8Psc">设计语言：</strong>致敬 1984/85 赛季那件令全欧洲过目不忘的<strong data-page-node-id="bNFHI7X16Cc3ZEm5jR0jOK">白色细横条纹</strong>客场球衣。纯白底色 + 细密水平线条纹路，复古而克制。</p>
+            <p data-page-node-id="shv9syEtAiXain0CVpe9xM"><strong data-page-node-id="BMlxWDOFKGBc1ZfSfmtkzm">细节：</strong>1984/85 赛季正是年仅 16 岁的<strong data-page-node-id="KXDufpr07FhUeHfq47Y8N2">保罗·马尔蒂尼</strong>完成一线队首秀的赛季，从此开启红黑传奇。俱乐部将该赛季客场球衣视为"欧洲幸运战袍"——米兰 6 次欧洲冠军中有 5 次身披白色出战。这件复刻款延续"胜利白"的传统寓意。</p>
+          </div>
+          <div class="kit-tags" data-page-node-id="KTzWHa9iYJUQRvZhgmFTKw"><span data-page-node-id="1LZms7mF7rITD7EehTEIda">白色横条纹</span><span data-page-node-id="V8lynDjuGlPRYW3Vr7SZfx">1984/85 复刻</span><span data-page-node-id="eHTcGvKksIAqtN1j52DEBB">马尔蒂尼首秀季</span></div>
+        </div>
+      </article>
+
+      <article class="kit" data-type="third" data-page-node-id="sbLdfW9U8aH87JWE3imPrX">
+        <div class="kit-imgs" data-page-node-id="NepvjtDEt0OkdibZGjRhij">
+          <span class="badge third" data-page-node-id="mrfQx9rVKfRQTbDuMV1Fzh">Third</span>
+          <img class="front" src="gallery/2223-third-main.jpg" alt="2022-23 第三球衣" data-page-node-id="ROp1otwkJcLMzqSUw7SZaC">
+          <img class="back" src="gallery/2223-third-wide.jpg" alt="2022-23 第三球衣 宣传图" data-page-node-id="JaSvIbSpQNiiKfOR2TsLef">
+          <span class="hint" data-page-node-id="cfjqpu5SMPGsnSnGFZZT8k">HOVER ↻</span>
+        </div>
+        <div class="kit-body" data-page-node-id="gDi0m1NZAh1oRhqSO7uWrb">
+          <div class="kit-name" data-page-node-id="qN9GyvNzGzER8pldw0DYni"><span class="dot third" data-page-node-id="TLwuGEWs3NGC6JBP9q0Vv5"></span>第三球衣 Third</div>
+          <div class="kit-theme" data-page-node-id="gQOCEZh3dU7bCMRwyuk0mo">"Milanese Style" · 米兰城市图腾的高定时装感</div>
+          <div class="kit-desc" data-page-node-id="kf3ZbwlbpyHq4MS5r13CD4">
+            <p data-page-node-id="JnPC1JC1i6fW32REDIieju"><strong data-page-node-id="iDq23brdA3x7aBcRLM8ouQ">设计语言：</strong>前所未有的<strong data-page-node-id="72uIsl9VmoXWAQZQEnJtT8">橄榄绿 + 荧光黄</strong>撞色——绿色为主调，胸前印有<strong data-page-node-id="8KTbdCZDH8eEAPbf1KUSyd">米兰市旗（圣安布罗修十字 Cross of St. Ambrose）</strong>的同色调大型图案，队徽以单色版本呈现。荧光黄嵌条在领口、袖口与队徽边缘做点缀。</p>
+            <p data-page-node-id="PjxN44CZHWOtvythCkc8Yh"><strong data-page-node-id="GP1Tl3iJnZNHvamQiGdikg">细节：</strong>由米兰本地设计师、创意人和俱乐部男女足球员共同参与官方摄影大片，定位为"时装 × 足球"的高端时尚表达；体现米兰作为全球时尚之都的"DNA"。是 Puma 与 AC米兰 战略合作中"米兰风格"（Milanese Style）系列的奠基之作。</p>
+          </div>
+          <div class="kit-tags" data-page-node-id="X2IRCa0zSzO7cu24TuccBN"><span data-page-node-id="jHBPbT4N7TWfcgrXtJJJd7">橄榄绿主调</span><span data-page-node-id="8UJdraNJgaFnHWpPeDqXbF">米兰市旗纹理</span><span data-page-node-id="tUgmOqZrDVB9IqPzUGh5ZG">荧光黄撞色</span><span data-page-node-id="8wnjobDKH2gSZKpoHibcsv">时装大片定位</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ 2023-24 ============ -->
+  <section class="season" id="s2324" data-page-node-id="idexAlWkwGPye0KDS1FWIs">
+    <div class="season-header" data-page-node-id="1uGz82wRWZmcmmOpE7HKfB">
+      <div class="season-title" data-page-node-id="9N5f08kv4s9MFBOZJGRDIN">2023/24 赛季</div>
+      <div class="season-tag" data-page-node-id="4AZFGqAZmKFMw0EgRnY6qD">从球场到伸展台 · 3 球衣</div>
+    </div>
+    <div class="kits" data-page-node-id="k2WB3x8WWgTkc8RU3AH8d6">
+
+      <article class="kit" data-type="home" data-page-node-id="2o0rkKRNuGKkRKioXg9KGy">
+        <div class="kit-imgs" data-page-node-id="fev9Xdm38L2WJviGABs9Ym">
+          <span class="badge home" data-page-node-id="X3h8DFZ427STsfUhDn39yu">Home</span>
+          <img class="front" src="gallery/2324-home-main.jpg" alt="2023-24 主场球衣" data-page-node-id="gXNzGpyNmSznO3MM5dMlNj">
+          <img class="back" src="gallery/2324-home-wide.jpg" alt="2023-24 主场球衣 宣传图" data-page-node-id="5jqGFkX9dt57LBE4xBcwee">
+          <span class="hint" data-page-node-id="fcPuqmct7eDUZxGfxTRQrR">HOVER ↻</span>
+        </div>
+        <div class="kit-body" data-page-node-id="WEQ1U3B7J9w4XYx5rcuTkg">
+          <div class="kit-name" data-page-node-id="Z1iTAyIvSh2OmhnefjLbTE"><span class="dot home" data-page-node-id="V6FoSoeo8AUSceuv7BD9bI"></span>主场球衣 Home</div>
+          <div class="kit-theme" data-page-node-id="a8iOSMrTDG6yrdeq9GOpPk">"This is the path of Milan" · 用"M"回声致敬城市</div>
+          <div class="kit-desc" data-page-node-id="74NsMAnVtMrNqPMDZg64FU">
+            <p data-page-node-id="UsYfw6YWwqofvSHausox8u"><strong data-page-node-id="2DwHKB4TZOFeiDXUhdrBtR">设计语言：</strong>重新解构红黑条纹——以<strong data-page-node-id="zBVoJbmmmeFkSXZTZei9ec">同色调暗纹 + 重复图形</strong>取代传统色块拼接，红黑之间通过深浅渐变构成"声波"般的"Chevron"山形节奏，并形成反复出现的<strong data-page-node-id="7iqVB11SnodnkD2QYIQtHf">大写"M"字形暗纹</strong>（代表 Milan / Milano）。</p>
+            <p data-page-node-id="Rk39RiVdHoNvffAThOBiLJ"><strong data-page-node-id="qYh5RB2mr13QdGfmgoFvrB">细节：</strong>纯黑 V 领、黑色袖口与下摆；后领"AC MILAN"大写印字；新条纹在远观时仍是经典 Rossoneri，近看则藏着对米兰这座城市的视觉密码。</p>
+          </div>
+          <div class="kit-tags" data-page-node-id="iQm19Qa2DFtQQrskfbsHXg"><span data-page-node-id="joaPFFV6Hmg8KxraTD8Oqg">重复"M"暗纹</span><span data-page-node-id="DcbCR1cEtwVW1Ox7pmHg5B">同色调渐变</span><span data-page-node-id="ZR9UtOX6sTRjwASbJYHYgk">黑色 V 领</span></div>
+        </div>
+      </article>
+
+      <article class="kit" data-type="away" data-page-node-id="3Wk57VXGsHg8V6UH4q8zp0">
+        <div class="kit-imgs" data-page-node-id="kUwSej7OUlZCBqBvTb6e6Y">
+          <span class="badge away" data-page-node-id="EnmgNEo9FSO72zT2MN26FG">Away</span>
+          <img class="front" src="gallery/2324-away-main.jpg" alt="2023-24 客场球衣" data-page-node-id="CxPj5219beTFKXuA7pYL4A">
+          <img class="back" src="gallery/2324-away-wide.jpg" alt="2023-24 客场球衣 宣传图" data-page-node-id="CUMUDdg5QN4DvC9GiILhJo">
+          <span class="hint" data-page-node-id="WSSvQvxgwKIjDy6Cljl2W1">HOVER ↻</span>
+        </div>
+        <div class="kit-body" data-page-node-id="GbfWEtt7er6yP1FzXJfKJa">
+          <div class="kit-name" data-page-node-id="J2rEzvOVQBWfoQUAsCSo3x"><span class="dot away" data-page-node-id="Zhe7HMSDCJ4bIp6bqP0MDo"></span>客场球衣 Away</div>
+          <div class="kit-theme" data-page-node-id="qVJ3vNG61lDVa5bVfjANZe">"The Lucky One" · 时装屋几何 × 米兰时尚基因</div>
+          <div class="kit-desc" data-page-node-id="RtGWFGzEeLnaqkVW1pGdWj">
+            <p data-page-node-id="IzxgxXeUOWfCIKfIOvLXJ4"><strong data-page-node-id="gKXBDJxBwcMHYZTxmZAbYP">设计语言：</strong>白色基底 + 队徽元素抽象化铺陈的<strong data-page-node-id="3uuw36LbCEZ02IwL25eC3M">全幅几何印花</strong>，灵感来自米兰时尚大牌的成衣面料——菱形、格纹与绸缎光感交织。</p>
+            <p data-page-node-id="r9ifvUptKabQR5F4seFQmW"><strong data-page-node-id="IZEi1cmki79WNoHJhyapNS">细节：</strong>白色自 1910 年起就是米兰"幸运客场色"，6 次欧洲冠军决赛有 6 次身披白色战袍出场。23/24 款首次让队徽本身的形态"碎化"成全衣纹理，模糊了时装与球衣的边界。</p>
+          </div>
+          <div class="kit-tags" data-page-node-id="OjRIatwytlsNxXKBFbBfhM"><span data-page-node-id="jOOKO1OlSRprvdo1YhBmUn">几何全幅印花</span><span data-page-node-id="cQ736M4aCdcUcH2ZyB4gUV">队徽纹理化</span><span data-page-node-id="Gyx2ybIBTWX51nf7yHuSNz">米兰时尚基因</span></div>
+        </div>
+      </article>
+
+      <article class="kit" data-type="third" data-page-node-id="WOsOkTpGdlggJzHcND6n1r">
+        <div class="kit-imgs" data-page-node-id="0rUURNWKsXlvCnbVhRn9X7">
+          <span class="badge third" data-page-node-id="QvItCx6oZd1ayhhFBGbLDR">Third</span>
+          <img class="front" src="gallery/2324-third-main.jpg" alt="2023-24 第三球衣" data-page-node-id="8JqqfQrAuCndCst97YqKFK">
+          <img class="back" src="gallery/2324-third-wide.jpg" alt="2023-24 第三球衣 宣传图" data-page-node-id="F6lFKAKcCD4S8nPwEts343">
+          <span class="hint" data-page-node-id="2xovaij22IyWuBir4k8JNZ">HOVER ↻</span>
+        </div>
+        <div class="kit-body" data-page-node-id="80k7a6iKYndqwQqvFq8wxo">
+          <div class="kit-name" data-page-node-id="sAFKDiWUQHRKju2VGxi9ac"><span class="dot third" data-page-node-id="c4j6FIDqjLtH77hdgoPuty"></span>第三球衣 Third</div>
+          <div class="kit-theme" data-page-node-id="4cmTynb4XtsTFu5B6JnKAn">"Inclusivity & Diversity" · 彩虹光谱中的多元与团结</div>
+          <div class="kit-desc" data-page-node-id="oWXlIpwjisDTZaRXEU8XhA">
+            <p data-page-node-id="x77MDIXUTFxBugh1P03BDD"><strong data-page-node-id="AlVzgjcespEhpFKC3tp75o">设计语言：</strong>紫罗兰 / 紫红 / 蓝绿 / 粉色的<strong data-page-node-id="gDpFdYQQb2gWTs985Cxp4u">渐变彩虹全幅印花</strong>，胸前印单色队徽；短裤与球袜为<strong data-page-node-id="yCsk0WFwoz69OPMHQfibpM">亮蓝</strong>撞色，背号与印字为白色。</p>
+            <p data-page-node-id="WY724yDntcKohbYiWL0omG"><strong data-page-node-id="gFU5NBUwrbybZM0HgoAQnA">细节：</strong>俱乐部官方声明此球衣"庆祝自创立之日起就深植于 AC米兰的包容与多元文化"；是 Puma 与俱乐部借助足球语言对 LGBTQ+ 群体表达支持的代表设计。</p>
+          </div>
+          <div class="kit-tags" data-page-node-id="2djlXtthAEtpRoImVJMogA"><span data-page-node-id="HN8RHrF3haHVRpJQu2Ekov">彩虹渐变</span><span data-page-node-id="ScNBrAJJVhNFszaJn65RP7">多元包容主题</span><span data-page-node-id="fVGr4eyd2PlS3DjubA8RC1">亮蓝短裤</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ 2024-25 ============ -->
+  <section class="season" id="s2425" data-page-node-id="hSWCLRwgpeV9WOjGWGuTWp">
+    <div class="season-header" data-page-node-id="ZCyexEtiSFJDoFkm8I6FnJ">
+      <div class="season-title" data-page-node-id="buZr6gJMH9s47SngC7MwTC">2024/25 赛季</div>
+      <div class="season-tag" data-page-node-id="I738Nb37YHNFh2M65J8xEC">125 周年 · 回归本源 · 3 球衣 + 1 特别版</div>
+    </div>
+    <div class="kits" data-page-node-id="TZ30RAEaZtLRcAu1Yz5maq">
+
+      <article class="kit" data-type="home" data-page-node-id="5KaCxUQ0RjSCWI7FE6pU5e">
+        <div class="kit-imgs" data-page-node-id="AHyoTyi09q7DJqTMvQKJ9C">
+          <span class="badge home" data-page-node-id="8YNjKKdioXjanTxCIq0c9K">Home</span>
+          <img class="front" src="gallery/2425-home-main.jpg" alt="2024-25 主场球衣" data-page-node-id="iAAeAwWgHAnapb3VtYgvoc">
+          <img class="back" src="gallery/2425-home-wide.jpg" alt="2024-25 主场球衣 宣传图" data-page-node-id="cNG63O1pXM45OyCCgmOuY5">
+          <span class="hint" data-page-node-id="fN28yGFH2KFGpnpgsihgey">HOVER ↻</span>
+        </div>
+        <div class="kit-body" data-page-node-id="xFBJxKUdF4BAevbqCGjKo6">
+          <div class="kit-name" data-page-node-id="sOwLHLaZOTDRRxwjWZ0PVR"><span class="dot home" data-page-node-id="VaQ8PWTnUn5YUFzW1or2dI"></span>主场球衣 Home</div>
+          <div class="kit-theme" data-page-node-id="SJW0eD4Tt8NGBsRKEKkQTk">"DNA says ACM" · 向 2010/11 致敬的家族传承</div>
+          <div class="kit-desc" data-page-node-id="9nJsF5kmTCBzdAOpav8sBi">
+            <p data-page-node-id="Iu0U2QyhB4fM5tJOh16moa"><strong data-page-node-id="p3UkKzG5tXimjI7lXizzr4">设计语言：</strong>接近 2010/11 那件被奉为经典的红黑条纹——<strong data-page-node-id="GsBQ7YWgZo8E9bPyCfneWi">等宽竖纹 + 白色 Polo 立领 + 白色袖口</strong>。红色条纹内印有暗光泽的几何纹路，在灯光下呈"丝绸质感"。</p>
+            <p data-page-node-id="T8zsKAL8DZx2bULFHvuqom"><strong data-page-node-id="DUFOAfzeD1Kfj5GfHp1BZV">细节：</strong>2024/25 是俱乐部 125 周年（1899-2024），后领印<strong data-page-node-id="Fz0fImlUnmqEoFaEbOnXAL">"125 AC Milan Years"</strong>字样与特殊周年臂章（"Social Club Institution"），胸前 Puma + Emirates。这是 2024 周年庆典系列的"母版"球衣。</p>
+          </div>
+          <div class="kit-tags" data-page-node-id="kGD8LXVu253TgPkbWMElsa"><span data-page-node-id="dy1LtWUZfJrA2upGMOsIEz">125 周年</span><span data-page-node-id="y1fN8YgXwi0VFh4N3Mz0Ec">2010/11 致敬</span><span data-page-node-id="ilAu5NQpiv3mintra8xeo2">等宽竖纹</span><span data-page-node-id="U9kYxIm8G4jyZ9NsJH51jU">白色 Polo 领</span></div>
+        </div>
+      </article>
+
+      <article class="kit" data-type="away" data-page-node-id="MzMa8xlxziPoem6ZfL6CI8">
+        <div class="kit-imgs" data-page-node-id="fXDhYA4ed74kDBR8oxrHu7">
+          <span class="badge away" data-page-node-id="uUeFdBFTJDhUmrLNWoIHHO">Away</span>
+          <img class="front" src="gallery/2425-away-main.jpg" alt="2024-25 客场球衣" data-page-node-id="Vcr2GX25UJY1pjLDbJJMej">
+          <img class="back" src="gallery/2425-away-wide.jpg" alt="2024-25 客场球衣 宣传图" data-page-node-id="B1imkkzgD2jZn71npbOR23">
+          <span class="hint" data-page-node-id="kcFCQr2FcsZayVBagOtSNW">HOVER ↻</span>
+        </div>
+        <div class="kit-body" data-page-node-id="6RsO4BFNV6MDbegY0HhF1I">
+          <div class="kit-name" data-page-node-id="z1dc6HQAILvYVUAE5fzJsq"><span class="dot away" data-page-node-id="DlpXEFPgAKAnYwr4ihrFWw"></span>客场球衣 Away</div>
+          <div class="kit-theme" data-page-node-id="7cXemHmqcuCd4UsCorrrCq">"Elegance in Motion" · 向"Milan Football & Cricket Club"溯源</div>
+          <div class="kit-desc" data-page-node-id="N80G6aTSo1cMMQVkCW4cw6">
+            <p data-page-node-id="sFGwBj0IX6qB3ddxuN8RhN"><strong data-page-node-id="BLSviHy6AM9InrnExPoD4G">设计语言：</strong>纯白主体 +<strong data-page-node-id="Gcy7ztwLombbNFBVaEtEH6">红黑撞色 Polo 领 + 暗纹细竖条纹</strong>。白底面料上印有同色调细密竖线，灵感来自俱乐部 1899 年建队时之名——"Milan Football and Cricket Club"的<strong data-page-node-id="bthDBslJRsVyGtiEhg9Ft7">板球条纹</strong>。</p>
+            <p data-page-node-id="cdA6ouVI8enu33J9EK8mp5"><strong data-page-node-id="JaNCCBIgsdTB9tTDpuLS7P">细节：</strong>领型与俱乐部诞生源头（板球俱乐部）形成跨越 125 年的对话；单色队徽与"老钱风" Polo 领组合，让这件球衣在时装周街头出现率极高。</p>
+          </div>
+          <div class="kit-tags" data-page-node-id="cUoDCuyXMZ8TIyaDZywCIj"><span data-page-node-id="tpQLH51XuEUmfevpWVZHmV">致敬板球俱乐部起源</span><span data-page-node-id="aF98nm0PT77kTQkuHekMvD">暗纹竖条纹</span><span data-page-node-id="0P8LxlhGVL3Hpa5eJnsfQF">Polo 领</span></div>
+        </div>
+      </article>
+
+      <article class="kit" data-type="third" data-page-node-id="gcRKGYAsMPBC0gO5UakFkc">
+        <div class="kit-imgs" data-page-node-id="SuCnbk2HUuJyYAUqIraLqp">
+          <span class="badge third" data-page-node-id="1Q1x0qaMu6ERibAjXHB1GN">Third</span>
+          <img class="front" src="gallery/2425-third-main.jpg" alt="2024-25 第三球衣" data-page-node-id="AR7EeRq3cOW66wkO9VwoON">
+          <img class="back" src="gallery/2425-third-wide.jpg" alt="2024-25 第三球衣 宣传图" data-page-node-id="vrRMSB9ZXLUAtTAeYrpMUY">
+          <span class="hint" data-page-node-id="WjcPmy3aZF5SkcEpMz6epS">HOVER ↻</span>
+        </div>
+        <div class="kit-body" data-page-node-id="p0FjOY3sxc49UnLOX3KKLy">
+          <div class="kit-name" data-page-node-id="uGikCKuH8HH8KOi4Q6WwSy"><span class="dot third" data-page-node-id="xdSC5DrrVmVoWlOh6ulGzw"></span>第三球衣 Third</div>
+          <div class="kit-theme" data-page-node-id="nwweTXDzJiscr7K6sH1zIG">"Welcome to Milan(ismo)" · 致敬 2003/04 黄金一代</div>
+          <div class="kit-desc" data-page-node-id="oC155JHIO3mmX78bteWNK3">
+            <p data-page-node-id="nmBUH2n58EjREhfJKKMo2m"><strong data-page-node-id="NXKCJiD6zYbmucd0851lEW">设计语言：</strong>主色 <strong data-page-node-id="mCh4jYsm9EXvpBnYtlEzZJ">"Shadow Grey" 阴影灰</strong>，领口与袖口为<strong data-page-node-id="P2SO5LnCOrbgZDU8RYdDRY">薄荷绿 / 葡萄雾紫</strong>撞色，胸前单色队徽——"红黑军团也可以是灰色"。</p>
+            <p data-page-node-id="4RFPKxV0VsggyHrnvcoJcR"><strong data-page-node-id="uD19SBqfz9Zc5OEVv90LTg">细节：</strong>设计灵感来自 2003/04 那件被 AC米兰球迷奉为神作的灰色客场球衣——那是卡卡、皮尔洛、马尔蒂尼、因扎吉、内斯塔缔造欧冠传奇的赛季。这件 24/25 第三以现代配色重新诠释了那一年的"暗夜优雅"。</p>
+          </div>
+          <div class="kit-tags" data-page-node-id="L620NAR8hjNL9dPG46NxZd"><span data-page-node-id="qyJot0aixkYS1bFoRay8HQ">阴影灰</span><span data-page-node-id="Do9QQRgY5t90hI7Pn50vRU">薄荷撞色</span><span data-page-node-id="wJo84EAAABIzigHjFywtlE">致敬 2003/04 黄金一代</span></div>
+        </div>
+      </article>
+
+      <article class="kit" data-type="special" id="s2425anniv" data-page-node-id="jbwXNdeGr9Te71eHNtGdGE">
+        <div class="kit-imgs" data-page-node-id="U9MHO2cJYJIjw7sFXyyN2j">
+          <span class="badge special" data-page-node-id="ACrfosSgby3ZSfemjm2PiO">125 Anniversary</span>
+          <img class="front" src="gallery/2425-anniv-main.jpg" alt="2024-25 125 周年特别球衣" data-page-node-id="2auM24Ftg3ZAbLrKFHTzIo">
+          <img class="back" src="gallery/2425-anniv-wide.jpg" alt="2024-25 125 周年特别球衣 宣传图" data-page-node-id="tD69sHhQppn4T4qUbI637b">
+          <span class="hint" data-page-node-id="lnQyIQ7Qpk16v64fUVOKOj">HOVER ↻</span>
+        </div>
+        <div class="kit-body" data-page-node-id="odhkqn0XEM1yDHLVKznCnL">
+          <div class="kit-name" data-page-node-id="n5B4HjPEVU2Q4XM8Qk6p2o"><span class="dot special" data-page-node-id="uUHilv9YpQKICGu0swy6tl"></span>125 周年特别球衣 Anniversary</div>
+          <div class="kit-theme" data-page-node-id="MoQQ1tPBX5Z93IImFEq92B">"Rossoneri 125" · 球迷共创的世纪纪念</div>
+          <div class="kit-desc" data-page-node-id="FMyjz1v27YF8LUtCjf6A0A">
+            <p data-page-node-id="zVuD5OpiCauW3Q8iPh6E9M"><strong data-page-node-id="f6K6AwLMmJMXunAuK8HbTE">设计语言：</strong>由 AC米兰球迷通过四轮线上投票选出设计元素——包括"圣乔治十字"（源自 1899 创会版队徽与 100 周年纪念球衣）、金线镶边与传统细条纹，是 Puma 与俱乐部送给全球 Rossoneri 的"情书"。</p>
+            <p data-page-node-id="asJkw4vofFEFejjBRapaFc"><strong data-page-node-id="x7SCeXhZWaQMo9ll5hYXd1">细节：</strong>2024 年 12 月发布，男女足一线队各在<strong data-page-node-id="6ZpawNqJXHiYX6TbEYonbS">一场正式比赛中</strong>身披此球衣出战。胸前银色 125 周年盾章、领口内印"Rossoneri 125"。是俱乐部历史上首次让球迷共同决定一款比赛球衣的关键细节。</p>
+          </div>
+          <div class="kit-tags" data-page-node-id="bF0wFMev7PvqMnIoNWLEJ0"><span data-page-node-id="1E5f5vtBuMM0q6TIwNyocv">球迷共创</span><span data-page-node-id="jZRLVSClhP9IHMwwd7BWH0">金色细线</span><span data-page-node-id="XQjme6HQPmn7QYFAYvarWj">圣乔治十字</span><span data-page-node-id="atKRN4TIKCP6RNowDJFwQE">周年盾章</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ 2025-26 ============ -->
+  <section class="season" id="s2526" data-page-node-id="5RmWS0ANLdUip3ZF3wOaoR">
+    <div class="season-header" data-page-node-id="W8Gv7fU2qkhy3OyqdrOUuX">
+      <div class="season-title" data-page-node-id="LmrNXYvOIKALf9tQEsGeTo">2025/26 赛季</div>
+      <div class="season-tag" data-page-node-id="FoeDP97kn4aCJeTDnpT9UY">"The Devil is in the details" · 火焰、恶魔与巴西</div>
+    </div>
+    <div class="kits" data-page-node-id="EYYU7svTj5WXBOgY2sPZJj">
+
+      <article class="kit" data-type="home" data-page-node-id="diZ1dbX6WOOdf0T4Piwv9t">
+        <div class="kit-imgs" data-page-node-id="92OUjTFocxA8e2UCeZgntM">
+          <span class="badge home" data-page-node-id="tZlGBDtTtxsAG6XRBTZt9k">Home</span>
+          <img class="front" src="gallery/2526-home-main.jpg" alt="2025-26 主场球衣" data-page-node-id="R2xblbFdnUC1bftYQpnE6F">
+          <img class="back" src="gallery/2526-home-wide.jpg" alt="2025-26 主场球衣 宣传图" data-page-node-id="CNpG1iv3GU5KeFuQvRdHyE">
+          <span class="hint" data-page-node-id="tA3deXJHAFF5cxrBU2x4su">HOVER ↻</span>
+        </div>
+        <div class="kit-body" data-page-node-id="dEyEC1dKEghsuHc26kiPTh">
+          <div class="kit-name" data-page-node-id="4KOJjDWT6I358ts2Ha8ACN"><span class="dot home" data-page-node-id="vKwNZPZ7w5pMh7qSUfOyA1"></span>主场球衣 Home</div>
+          <div class="kit-theme" data-page-node-id="LnG1kZ5itwQLcdmWB6bD1Y">"Red like flames, black to invoke fear" · 赫尔伯特·基尔平的火焰</div>
+          <div class="kit-desc" data-page-node-id="CMX2Ds0AKukIMqhUyQ7QUs">
+            <p data-page-node-id="AZqaZayqQnCEl71qBFCdv8"><strong data-page-node-id="ZyVHFxdhQO4PUcOT49a3du">设计语言：</strong>红黑竖纹中加入<strong data-page-node-id="3jCN5yqW09t0G3GOpGLz8s">暗纹火焰纹路</strong>，呼应俱乐部创始人<strong data-page-node-id="2IA1vapoGXRIHFwJqDKeoZ">赫尔伯特·基尔平 1899 年那句名言</strong>——"我们要让球衣红如火焰，让黑色使对手心生恐惧"。</p>
+            <p data-page-node-id="CqwRYWjhCnRDU32WMfUwF9"><strong data-page-node-id="qxlX7Sul4pdlYjHCgZOFse">细节：</strong><strong data-page-node-id="EX6SYrAzac50RA4TFUl47T">历史首次</strong>将主队徽改为<strong data-page-node-id="OSfRvjyHGtpG2pSKsMa4JQ">单色红</strong>徽，放弃多色经典版；后颈印"MILAN"红字；黑色短裤与球袜。是 Puma 时代最具实验精神的主场球衣之一。</p>
+          </div>
+          <div class="kit-tags" data-page-node-id="DhBSgcSg27RUYZjNyQlUtw"><span data-page-node-id="h7SyuenmqTPyt942K86Ujr">暗纹火焰</span><span data-page-node-id="4faFMxvrt4ZZoo483aig8S">单色红队徽（首次）</span><span data-page-node-id="fZGp74cJWOXrgYHKsRYDuG">基尔平 1899 名言</span></div>
+        </div>
+      </article>
+
+      <article class="kit" data-type="away" data-page-node-id="mLfSuQ7m48Na9GWDXPSTOv">
+        <div class="kit-imgs" data-page-node-id="YHODQOmyA2PdSWUSzj4Ar5">
+          <span class="badge away" data-page-node-id="hXrgvJoBXjPII4DQeNNuCo">Away</span>
+          <img class="front" src="gallery/2526-away-main.jpg" alt="2025-26 客场球衣" data-page-node-id="e1rbZ8W7KHShdhqBGKwtlO">
+          <img class="back" src="gallery/2526-away-wide.jpg" alt="2025-26 客场球衣 宣传图" data-page-node-id="5258GaGjsCcGPTrtqdMMCd">
+          <span class="hint" data-page-node-id="uOcO8IbsTj6IpJP44sy4tn">HOVER ↻</span>
+        </div>
+        <div class="kit-body" data-page-node-id="wNFt0hASn4m59NQuafM49t">
+          <div class="kit-name" data-page-node-id="m5Hw16VBQqcjoGvaUS6uji"><span class="dot away" data-page-node-id="6UVtDRmHj2S8PcGYrkGGVG"></span>客场球衣 Away</div>
+          <div class="kit-theme" data-page-node-id="2C6mt9QnR2Weweyxb5OXpv">"Diavoletto" · 1980 年代小恶魔的回归</div>
+          <div class="kit-desc" data-page-node-id="JJEQ3eRdnQvjVawLYGdBOO">
+            <p data-page-node-id="GQddf4TdENDvakxLtpocWl"><strong data-page-node-id="CWJHxBoQHkWUFmHGAXyxkP">设计语言：</strong>纯白底 +<strong data-page-node-id="LZ1KC1c0re6Z7iO0JVwqgn">红黑撞色袖片</strong> + 同色调暗纹几何；胸前以<strong data-page-node-id="hrEWbfhYd7871p3vwCeACZ">80 年代经典 "Diavoletto"（小恶魔徽章）</strong>取代常规队徽——这是 1981/82 客场球衣的灵魂符号。</p>
+            <p data-page-node-id="lYGDAa8aV37F1gTrl2VQqa"><strong data-page-node-id="e24ZNfTJ0Y2yg7uFRFi45A">细节：</strong>小恶魔是 AC米兰 "Il Diavolo"（魔鬼）昵称的视觉化身，本季首次回归正式比赛球衣。白色基底配合运动剪裁，让这件球衣在球场与街头两端同时高调。</p>
+          </div>
+          <div class="kit-tags" data-page-node-id="t8t4l9aBPccnlZHNcqxMAy"><span data-page-node-id="hqIFsUytjXJfpUF0AvBQkB">小恶魔徽章回归</span><span data-page-node-id="EGhZvbAELfjf8BYqPWHSKB">1981/82 致敬</span><span data-page-node-id="9dbcW461Qbo7c9NiL0Priz">红黑撞色袖</span></div>
+        </div>
+      </article>
+
+      <article class="kit" data-type="third" data-page-node-id="L9O03dpNVTcWaEZTwfF81s">
+        <div class="kit-imgs" data-page-node-id="9DjTalO64zAW8G4fHpaqSF">
+          <span class="badge third" data-page-node-id="7FavstmMzdbiIr0cYJTKU8">Third</span>
+          <img class="front" src="gallery/2526-third-main.jpg" alt="2025-26 第三球衣" data-page-node-id="hkqLlznPzQZmvkaYSaWvvi">
+          <img class="back" src="gallery/2526-third-wide.jpg" alt="2025-26 第三球衣 宣传图" data-page-node-id="WkPIXhhnTaejL1XOD9cdO0">
+          <span class="hint" data-page-node-id="l5k2exkiKCj7FE2ldEwMgO">HOVER ↻</span>
+        </div>
+        <div class="kit-body" data-page-node-id="wRfPPzgDJo8uRZ97YGa4Vi">
+          <div class="kit-name" data-page-node-id="deVDH7mI2I29yJCEiQp4jD"><span class="dot third" data-page-node-id="n0plDcyB79nk6QZsZGweif"></span>第三球衣 Third</div>
+          <div class="kit-theme" data-page-node-id="cNkMplmvG3YuHX9afpZl01">"1995/96 Scudetto Yellow" · 巴西黄绿 × 米兰复古</div>
+          <div class="kit-desc" data-page-node-id="tUCJ4qHwCV2DBbyGAHOH3w">
+            <p data-page-node-id="NDQBE66VELFMR8IVN3NEyA"><strong data-page-node-id="Pkf52UC6iMWOLg01hHwOmA">设计语言：</strong>明亮<strong data-page-node-id="zmmAFFXmRkemZR91u6w4kp">日光黄 + 深绿</strong>撞色，<strong data-page-node-id="UN7MxFxzDHogVGdyb8dB8K">复古翻领</strong>（polo 领）+ 全身 <strong data-page-node-id="m4yhwg2omVx3eWEsqvhEMG">ACM 字母暗纹 monogram</strong>。胸前 Puma 红色标 + 队徽回归"正式多色版"。</p>
+            <p data-page-node-id="EfLNlZw2YwPuyzvmu3DUIC"><strong data-page-node-id="K6nyTvLCcCciZZlCEzkpbO">细节：</strong>致敬 1995/96 赛季的"黄色第三球衣"——那一年红黑军团提前数轮锁定意甲冠军（塔巴雷斯 → 萨基 → 卡佩罗时代）。Emirates 赞助标识为绿色，与黄底形成撞色。第三球衣重返"欢乐、阳光、巴西感"的 90 年代意甲视觉。</p>
+          </div>
+          <div class="kit-tags" data-page-node-id="3UG9Prz276noHGEfYG9zLn"><span data-page-node-id="zyBkhPHVmax3kqlgGt0baN">日光黄 + 深绿</span><span data-page-node-id="4SpD8WRo7C67ZEyOmnJ4Cm">1995/96 Scudetto 致敬</span><span data-page-node-id="mQ9XRO7Zg5qCSvENZZGDmX">复古翻领</span><span data-page-node-id="5bBYQEJBQZ8Pi9i2aCFKGn">全幅 ACM 字母纹</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ 2026-27 ============ -->
+  <section class="season" id="s2627" data-page-node-id="r4tv6CaKfYVF5B4AyzkXTG">
+    <div class="season-header" data-page-node-id="aKS538XIKJvqFtpsSOIxOs">
+      <div class="season-title" data-page-node-id="qJSBWPTC4Hh0eV5tUOHDUX">2026/27 赛季</div>
+      <div class="season-tag" data-page-node-id="mjuCeYHC2AC5CgL8basQhD">现行赛季 · 经典 + 紫光黑</div>
+    </div>
+    <div class="kits" data-page-node-id="t8u4TyOsNcwZLubLfCxwQQ">
+
+      <article class="kit" data-type="home" data-page-node-id="5GuW1xgtHmvPlfEyRDTet2">
+        <div class="kit-imgs" data-page-node-id="5BrWKfa9qWUf3wPe8OEqgM">
+          <span class="badge home" data-page-node-id="cS7DveJInSPDHJnCseIl7x">Home</span>
+          <img class="front" src="gallery/2627-home-main.jpg" alt="2026-27 主场球衣" data-page-node-id="dVUEw95ppnXWFw0Pn6B3D6">
+          <img class="back" src="gallery/2627-home-wide.jpg" alt="2026-27 主场球衣 宣传图" data-page-node-id="uhnHPbVbZkIq4ZyXn8lfRQ">
+          <span class="hint" data-page-node-id="jkGpwm6KBsbCQFcDXjDvww">HOVER ↻</span>
+        </div>
+        <div class="kit-body" data-page-node-id="3moEZh91CzSDOvEoELajb2">
+          <div class="kit-name" data-page-node-id="AYzPbZpyhH7cPEnT8ybwrC"><span class="dot home" data-page-node-id="wbBEDN9ComcmEkZWHtCicR"></span>主场球衣 Home</div>
+          <div class="kit-theme" data-page-node-id="niBLPkbC4r7Nqh3JGnuter">"From Milan to the World" · 90 年代粗条纹的伟大回归</div>
+          <div class="kit-desc" data-page-node-id="YKxUNRBFnC7ZCbDUMREg3A">
+            <p data-page-node-id="P1Htv7TgvwX7G7l2Sbc7fF"><strong data-page-node-id="jsXAMMWWdmwfOb7kgFMgQT">设计语言：</strong><strong data-page-node-id="BVtxcAa6TcjIsWoyzVDOFW">粗壮、宽阔的红黑条纹</strong>回到视觉中心——<strong data-page-node-id="nGRPmChs6HnDdhFjgzDOKH">回归 1998/99 时代 Adidas 那件 Scudetto 球衣</strong>的纯粹美学。搭配回归的<strong data-page-node-id="M6aAKP0twEuSjKCx8saCis">白色短裤 + 黑色球袜</strong>，是 21/22 以来最"经典"的主场造型。</p>
+            <p data-page-node-id="H9Ta2nU8dEocfOIydSoAGT"><strong data-page-node-id="DfbcZeHLKa2cvqtHHvMzkB">细节：</strong>后颈内印<strong data-page-node-id="XFX7AfqTsHxUtkD8ZuRzGR">"From Milan to the World"</strong>（从米兰到世界），致敬全球数百万红黑球迷；后领外侧烫印<strong data-page-node-id="OmooHdM3PYQWD4666c1i4o">红黑蜡封印章</strong>，内含队徽——"这不仅是球衣，更是跨代相传的签名"。PUMA 团队运动产品线管理总监 Maria Kiebacher 表示："粗条纹是这件球衣的灵魂，它不需要被重新定义，只需要被致敬。"</p>
+          </div>
+          <div class="kit-tags" data-page-node-id="vMtaj2NAB8dS5OejXEijMX"><span data-page-node-id="S1F0HVgeaYh6gdPREbkytp">粗条纹回归</span><span data-page-node-id="JpV1fwy8BMQZzJQ2BifhEU">白短裤 + 黑球袜</span><span data-page-node-id="Qg0phPcm3gIUyEzzgcgPDV">蜡封后领</span><span data-page-node-id="8bn0J9FB9tbAwKGRzlUbeM">1998/99 致敬</span></div>
+        </div>
+      </article>
+
+      <article class="kit" data-type="away" data-page-node-id="BzolL0XeZM0GqCklCZJODG">
+        <div class="kit-imgs" data-page-node-id="uCJte8p8jh4gUBNlQO3iPZ">
+          <span class="badge away" data-page-node-id="hFyYZrhXvSW3t5fQ9dIgPM">Away</span>
+          <img class="front" src="gallery/2627-away-main.jpg" alt="2026-27 客场球衣" data-page-node-id="mZAUtXcC0fCDzJYTN0Xv6g">
+          <img class="back" src="gallery/2627-away-wide.jpg" alt="2026-27 客场球衣 宣传图" data-page-node-id="fCCFh9a4OvjQZ1KRGVPSaq">
+          <span class="hint" data-page-node-id="onOCjqVyePg8itDsWHiPBN">HOVER ↻</span>
+        </div>
+        <div class="kit-body" data-page-node-id="xkSqZJgscwEhf3xP0NH2Ew">
+          <div class="kit-name" data-page-node-id="BCauF3EB0WFgMoSdgCbcva"><span class="dot away" data-page-node-id="an9A4L1mhDOW2BWijYloRG"></span>客场球衣 Away</div>
+          <div class="kit-theme" data-page-node-id="0JKEctwMwCAguYaOS1gpFB">"Dopo Istanbul c'è sempre Atene" · 伊斯坦布尔之后总有雅典</div>
+          <div class="kit-desc" data-page-node-id="uuLPGOad4tUYPGGCFfSbIQ">
+            <p data-page-node-id="Z1ENHwGdx5IoHfKFRyZZ5n"><strong data-page-node-id="gQf0JS6UwQGvT3hyeyjzhl">设计语言：</strong>纯白基底 +<strong data-page-node-id="kcGLO7ZnOrNH43D0nNyw37">金色 Puma 标 + 红黑细节 Polo 领</strong>，整体呈现"贵族优雅"质感。同色调暗纹提供面料质感。</p>
+            <p data-page-node-id="kBYcI3C968uC1KdaZSnmjx"><strong data-page-node-id="T6Sr2ePM02jc6vStUESkXL">细节：</strong>后领内印<strong data-page-node-id="CLTUnCreWXAYSdTH0Mi2yr">"Dopo Istanbul c'è sempre Atene"</strong>（伊斯坦布尔之后，总有雅典）——这串意大利文浓缩了 AC米兰最悲喜交加的欧冠记忆：<strong data-page-node-id="Hj36zPSA7CZ9mVm2vqo9eY">2005 年伊斯坦布尔决赛</strong>被利物浦 3-3 绝平后点球失利，<strong data-page-node-id="b561h1mr9N48lvH6MU5qBH">2007 年雅典决赛</strong>2-1 复仇利物浦夺冠。后领的小小字母，是把两代球迷绑定在一起的精神暗号。</p>
+          </div>
+          <div class="kit-tags" data-page-node-id="WQQDhDGePFDIKym5nOWmpj"><span data-page-node-id="MPhPdR6S9DdY2i7Cc6mFH1">伊斯坦布尔/雅典之约</span><span data-page-node-id="YmapR6cHrHCLBywE0A7I8U">金色 Puma 标</span><span data-page-node-id="IEYYVvArrAz6BVa8rQWAAk">贵族优雅质感</span></div>
+        </div>
+      </article>
+
+      <article class="kit" data-type="third" data-page-node-id="rBsiXpX0dnw4SeaSv0IjxT">
+        <div class="kit-imgs" data-page-node-id="WxmbABEYU7AgCnCEKdMNrr">
+          <span class="badge third" data-page-node-id="y5to0NyyMTg2K1lpbYSdYA">Third</span>
+          <img class="front" src="gallery/2627-third-main.jpg" alt="2026-27 第三球衣" data-page-node-id="R4IMf2hkmPwywF9kE9Kuu3">
+          <img class="back" src="gallery/2627-third-wide.jpg" alt="2026-27 第三球衣 宣传图" data-page-node-id="Qp6r4hNo4vWZPBYYXThk2i">
+          <span class="hint" data-page-node-id="qzCwE35EdWYeYH9E0X14jA">HOVER ↻</span>
+        </div>
+        <div class="kit-body" data-page-node-id="uAXaqN97gp5MA0J6q3KJPY">
+          <div class="kit-name" data-page-node-id="RMBNXwgnhv96JCbcmS0ATc"><span class="dot third" data-page-node-id="LI1keHgILJQzwPb9Hoya8h"></span>第三球衣 Third</div>
+          <div class="kit-theme" data-page-node-id="jWN3eCtT0yCUsxxzPGwHUt">"Rossoneri in a New Light" · 紫外光下的新红黑平衡</div>
+          <div class="kit-desc" data-page-node-id="WwEH5M2mkCS3Jvk4Ve9lgi">
+            <p data-page-node-id="G01ZQs8l1fsydzVFMSPIwO"><strong data-page-node-id="tVeAGJcscQGfRxDBWRtrRD">设计语言：</strong>纯<strong data-page-node-id="q0lsJPDiTRIeIHHY4iQvsn">深炭黑底 + 荧光红</strong>（Glowing Red）细节，胸前居中放置<strong data-page-node-id="HCdTV4PJbDN142noyKQKyq">单色红队徽</strong>（红黑配色的新平衡） + 红色 Puma 标 + 红色 Emirates 标；领口与袖口采用多层次红色拼接，呈现"波纹"质感。</p>
+            <p data-page-node-id="OVb8pjJpsFdv1ms9ZjRizz"><strong data-page-node-id="aow3cxbxIUKp96dkDcTBkG">细节：</strong>本季球衣最大亮点是<strong data-page-node-id="qNlTu7Nq6QDhJgogNb13a7">UV 紫外光反应印花</strong>——在普通光线下呈现低调黑红，<strong data-page-node-id="TMLXWhP94wlQcoyxtedN7H">在紫外光照射下细节会"活"起来</strong>，亮红细节发出荧光。后领下方隐藏<strong data-page-node-id="I3im8Ku2SvFSW0gGBqqT4M">红色小恶魔 Diavolo 徽章</strong>；内领印"Sempre Milan"。<strong data-page-node-id="dxhDHmTySPF9eR3Kj9iO0T">2026 年 8 月 7 日</strong>在雅加达与切尔西的季前赛完成首秀（Gelora Bung Karno 球场）。</p>
+          </div>
+          <div class="kit-tags" data-page-node-id="gfsm0Bbe6wJMPHil1PxuNy"><span data-page-node-id="yw7y4kdNKiJn0NuJSP3GVu">UV 紫外光反应</span><span data-page-node-id="ucqQvCmjUM0YCInywaEC76">荧光红细节</span><span data-page-node-id="GcG731DLaxe8Wm3BjdYWSB">Diavolo 后领</span><span data-page-node-id="UMllmG1nqO4Q5BbrTOi7kP">雅加达首秀</span></div>
+        </div>
+      </article>
+
+      <article class="kit full" data-type="third-alt" data-page-node-id="EAN9EPYMQ7OEIAErC2p7xR">
+        <div class="kit-imgs" data-page-node-id="AFGTfzP69Faziui8kykfMm">
+          <span class="badge third" data-page-node-id="31SyDA0MRYpaPgaRAWBisE">Third · 官方产品图</span>
+          <img class="front" src="gallery/2627-third-product.jpg" alt="2026-27 第三球衣 官方产品图" data-page-node-id="g2DTNrQLyluH4a7yzZdVvi">
+          <img class="back" src="gallery/2627-third-main.jpg" alt="2026-27 第三球衣 穿着图" data-page-node-id="AYNenbsFx34lESnWqhqd91">
+          <span class="hint" data-page-node-id="19HE4eFGv5wRPYBsO1EP1g">HOVER ↻</span>
+        </div>
+        <div class="kit-body" data-page-node-id="eLPFmYf5sdPMG7LJULTHpK">
+          <div class="kit-name" data-page-node-id="U2NyotNrPvnfriGPprzMGh"><span class="dot third" data-page-node-id="TmLjDCvOw4hk2Lp2Q3HFPk"></span>第三球衣 · 官方白底产品图（附加视图）</div>
+          <div class="kit-theme" data-page-node-id="FC31OrFusT2KNVmEkkuNmv">干净产品照 · 便于查看设计细节</div>
+          <div class="kit-desc" data-page-node-id="kW4PNKapC1L1JInHMAem0k">
+            <p data-page-node-id="lHHwj7VpTkjhyr0tKRHBin">来自官方商店 store.acmilan.com 的<strong data-page-node-id="rbFTQQuIstUdLQ5Ql1KhBo">女款（Banco BPM 胸前赞助）白底产品图</strong>，可清晰看到球衣的极简黑底 + 红色 logo 布局、袖口红绿撞色、领口内侧"Sempre Milan"等工艺细节。男士版本胸前为 Emirates Fly Better。</p>
+          </div>
+          <div class="kit-tags" data-page-node-id="XDkuA0TYmkTmB2YD9yQGtk"><span data-page-node-id="wyfI8kBqDsF7E5k0v209Db">女款</span><span data-page-node-id="Z4nLV0tgTBVNaaT4SJOJKP">Banco BPM 赞助</span><span data-page-node-id="fDwrZRZ8FNo2rlJO4s1fFw">官方白底图</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</div>
+
+<footer class="footer" data-page-node-id="ZWBC2lv2JJY5FzVG1l0tsT">
+  <p data-page-node-id="EH8YOoaBfxJF5Axl7aAehh">本图鉴整理自 <a href="https://www.acmilan.com/en/news" target="_blank" rel="noopener" data-page-node-id="xGG3M5j3EBzNvvnzGCqvbR">AC米兰官方发布</a> 与 <a href="https://store.acmilan.com" target="_blank" rel="noopener" data-page-node-id="HL6X77JASVDTMudyj3Lclf">AC米兰官方商店</a>。设计元素解读参考 Goal、SempreMilan、Soccer Wearhouse 等专业球衣媒体报道。</p>
+  <p style="margin-top:8px" data-page-node-id="R35utQgXC2SvEsencscpZt">© 2026 AC Milan × Puma · 仅供球迷收藏欣赏使用</p>
+</footer>
+
+</body>
+</html>
