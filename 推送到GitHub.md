@@ -52,6 +52,27 @@ cd "C:/Users/ieeen/WorkBuddy/2026-09-08-15-48-49/acmilan-cdn"
 git push origin main
 ```
 
+## 第三次推送（加入联名款球衣）— 当前待执行
+
+仓库已新增 `collab/`（12 张联名球衣压缩图）和 `collab.html`（Pages 版联名图鉴），并打了 **`v2` tag**。
+
+```bash
+cd "C:/Users/ieeen/WorkBuddy/2026-09-08-15-48-49/acmilan-cdn"
+git push origin main
+git push origin v2
+```
+
+推送后联名款 CDN 链接生效（等 1~5 分钟）：
+
+```
+https://fastly.jsdelivr.net/gh/alwayswithyou/acmilan-kits-cdn@v2/collab/06-asaprocky-main.jpg
+```
+
+联名图鉴 Pages 地址：`https://alwayswithyou.github.io/acmilan-kits-cdn/collab.html`
+
+> **关于 tag**：`v1` 只覆盖 `images/`（正文 22 张），`v2` 覆盖全部（`images/` + `gallery/` + `collab/`）。
+> 两个 tag 并存互不影响，`@v1` 的旧链接继续有效。
+
 ## 开启 GitHub Pages（用于公众号「阅读原文」）
 
 1. 打开 `https://github.com/alwayswithyou/acmilan-kits-cdn/settings/pages`
