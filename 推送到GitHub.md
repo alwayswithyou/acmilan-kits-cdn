@@ -82,6 +82,28 @@ https://fastly.jsdelivr.net/gh/alwayswithyou/acmilan-kits-cdn@v2/collab/06-asapr
 
 这就是文章末尾「阅读原文」的永久地址，和图片 CDN 同源，不会失效。
 
+## 第四次推送（加入欧宝时期配图）— 已完成 ✅
+
+仓库已新增 `opel/`（18 张欧宝时期配图 + `00-cover.jpg` 900×383 封面），并打了 **`v3` tag**。
+
+```bash
+cd "C:/Users/ieeen/WorkBuddy/2026-09-08-15-48-49/acmilan-cdn"
+git push origin main
+git push origin v3
+```
+
+推送后欧宝配图 CDN 链接生效（等 1~5 分钟）：
+
+```
+https://fastly.jsdelivr.net/gh/alwayswithyou/acmilan-kits-cdn@v3/opel/04-kaka-derby.jpg
+```
+
+封面：`https://fastly.jsdelivr.net/gh/alwayswithyou/acmilan-kits-cdn@v3/opel/00-cover.jpg`
+
+> **tag 并存关系**：`v1` 只覆盖 `images/`，`v2` 覆盖 `images/` + `gallery/` + `collab/`，
+> `v3` 覆盖 `opel/`。三个 tag 并存互不影响，`@v1`/`@v2` 的旧链接继续有效。
+> 新增内容一律打新 tag，不要移动旧 tag。
+
 ## 国内访问速度
 
 jsDelivr 主域名在国内部分地区不稳定。如果粘贴到公众号/头条后图片加载慢或抓取失败，换备用域名即可（路径不变，只需改域名）：
